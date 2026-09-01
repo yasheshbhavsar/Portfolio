@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (this.bgAudio) {
                 this.bgAudio.loop = true;
-                this.bgAudio.volume = 0.06;
+                this.bgAudio.volume = 0.5;
                 this.bgAudio.addEventListener('ended', () => {
                     if (!this.isMuted) {
                         this.bgAudio.currentTime = 0;
@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (this.audioLabel) this.audioLabel.textContent = 'Sound On';
                     if (this.bgAudio) {
                         this.bgAudio.loop = true;
-                        this.bgAudio.volume = 0.06;
+                        this.bgAudio.volume = 0.5;
                         const playPromise = this.bgAudio.play();
                         if (playPromise !== undefined) {
                             playPromise.catch(err => {
