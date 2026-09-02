@@ -1118,7 +1118,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.roleEl.textContent = data.role;
             this.timelineEl.textContent = data.timeline;
             this.deliverablesEl.textContent = data.deliverables;
-            this.imgEl.src = (key === 'batball') ? 'images/batball11-dashboard.jpg' : data.img;
+            this.imgEl.src = (key === 'batball') ? 'batball11-dashboard.jpg' : data.img;
             this.solutionEl.textContent = data.solution;
 
             this.tagsEl.innerHTML = '';
