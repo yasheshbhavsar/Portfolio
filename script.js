@@ -18,8 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             role: 'Gen AI Auditor',
             timeline: 'MAR 2026 — Present',
             deliverables: 'Human-in-the-Loop Feedback, Bias Auditing, Fact-Checking',
-            img: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?w=1600&h=900&fit=crop',
-            challenge: 'Frontier generative AI models frequently generate hallucinated assertions, subtle reasoning fallacies, or nuanced biases across complex prompts that automated benchmarks fail to detect.',
+            img: 'https://images.unsplash.com/photo-1694903089438-bf28d4697d9a?w=1600&h=900&fit=crop',
             solution: 'Perform rigorous human-in-the-loop evaluations analyzing response truthfulness, logical safety guardrails, and tonal nuances to supply the critical supervisory signals required to train smarter and more reliable AI models.',
             tags: ['Generative AI', 'RLHF & Alignment', 'Fact-Checking', 'Bias Detection', 'Safety Guardrails', 'Model Auditing']
         },
@@ -30,8 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             role: 'Head of Department & Visa Counsellor',
             timeline: 'JAN 2022 — JUL 2026',
             deliverables: 'Legal Petitions, Comprehensive Document Audits, Team Leadership',
-            img: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?w=1600&h=900&fit=crop',
-            challenge: 'Immigration submissions and international visa processes involve high-stakes legal scrutiny where factual discrepancies or non-compliant cover letters result in immediate rejections under rigid deadlines.',
+            img: 'https://images.unsplash.com/photo-1581656702382-9ae90e68e7b7?w=1600&h=900&fit=crop',
             solution: 'Oversaw the entire filing department, authored precise legal submission letters, resolved complex escalations, and established rigorous verification checkpoints ensuring 100% compliant, error-free petitions.',
             tags: ['Legal Drafting', 'Regulatory Compliance', 'Document Review', 'Risk Assessment', 'Escalation Management']
         },
@@ -42,8 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             role: 'Administrative & Data Specialist',
             timeline: 'FEB 2021 — DEC 2021',
             deliverables: 'Real-time Anomaly Detection, Live Match Telemetry, Data Operations',
-            img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&h=900&fit=crop',
-            challenge: 'Handling real-time backend data for a live fantasy sports gaming platform demanded zero-error operational execution under high concurrent user activity.',
+            img: (typeof window !== 'undefined' && window.BATBALL11_LOCAL_IMAGE) ? window.BATBALL11_LOCAL_IMAGE : 'images/batball11-dashboard.jpg',
             solution: 'Maintained absolute data accuracy, established real-time anomaly detection routines, and rapidly diagnosed edge-case anomalies to ensure seamless, uninterrupted platform operations.',
             tags: ['Data Verification', 'Anomaly Detection', 'Backend Operations', 'Quality Assurance', 'Real-time Telemetry']
         },
@@ -54,8 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             role: 'Content Writer & Researcher',
             timeline: 'AUG 2019 — DEC 2019',
             deliverables: 'Current Affairs Articles, Multi-Source Fact Checking, Editorial Synthesis',
-            img: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1600&h=900&fit=crop',
-            challenge: 'Rapid current affairs publishing requires fast-turnaround analysis while maintaining uncompromising standards of factual veracity and grammatical precision.',
+            img: 'https://images.unsplash.com/photo-1519337265831-281ec6cc8514?w=1600&h=900&fit=crop',
             solution: 'Conducted in-depth investigative research, performed rigorous multi-source verification, and synthesized complex events into lucid, engaging, and accurate articles.',
             tags: ['Fact-Checking', 'Grammar & Syntax', 'Current Affairs', 'Research Synthesis', 'Editorial Standards']
         }
@@ -76,11 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (this.bgAudio) {
                 this.bgAudio.loop = true;
-                this.bgAudio.volume = 0.6;
+                this.bgAudio.volume = 0.06;
                 this.bgAudio.addEventListener('ended', () => {
                     if (!this.isMuted) {
                         this.bgAudio.currentTime = 0;
-                        this.bgAudio.play().catch(() => {});
+                        this.bgAudio.play().catch(() => { });
                     }
                 });
             }
@@ -97,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
             if (this.ctx && this.ctx.state === 'suspended') {
-                this.ctx.resume().catch(() => {});
+                this.ctx.resume().catch(() => { });
             }
         }
 
@@ -105,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (this.isMuted || !this.ctx) return;
             try {
                 const now = this.ctx.currentTime;
-                
+
                 const osc1 = this.ctx.createOscillator();
                 const gain1 = this.ctx.createGain();
                 osc1.type = 'sine';
@@ -134,14 +130,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 osc2.start(now);
                 osc1.stop(now + 0.13);
                 osc2.stop(now + 0.10);
-            } catch (e) {}
+            } catch (e) { }
         }
 
         playClick() {
             if (this.isMuted || !this.ctx) return;
             try {
                 const now = this.ctx.currentTime;
-                
+
                 const osc = this.ctx.createOscillator();
                 const gain = this.ctx.createGain();
                 osc.type = 'triangle';
@@ -170,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 clickOsc.start(now);
                 osc.stop(now + 0.14);
                 clickOsc.stop(now + 0.05);
-            } catch (e) {}
+            } catch (e) { }
         }
 
         playModalOpen() {
@@ -195,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     osc.start(now);
                     osc.stop(now + 0.36);
                 });
-            } catch (e) {}
+            } catch (e) { }
         }
 
         playModalClose() {
@@ -217,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 osc.start(now);
                 osc.stop(now + 0.24);
-            } catch (e) {}
+            } catch (e) { }
         }
 
         setMute(mute) {
@@ -235,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (this.audioLabel) this.audioLabel.textContent = 'Sound On';
                     if (this.bgAudio) {
                         this.bgAudio.loop = true;
-                        this.bgAudio.volume = 0.6;
+                        this.bgAudio.volume = 0.06;
                         const playPromise = this.bgAudio.play();
                         if (playPromise !== undefined) {
                             playPromise.catch(err => {
@@ -270,32 +266,19 @@ document.addEventListener('DOMContentLoaded', () => {
         constructor() {
             this.themeToggleBtn = document.getElementById('theme-toggle');
             this.themeLabel = document.getElementById('theme-status-label');
-            this.currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+            this.currentTheme = 'dark';
             this.subscribers = [];
 
             this.init();
         }
 
         init() {
-            const savedTheme = localStorage.getItem('yb_theme');
-            if (savedTheme) {
-                this.setTheme(savedTheme, false);
-            } else {
-                const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-                this.setTheme(prefersLight ? 'light' : 'dark', false);
-            }
+            // Dark mode is default on every reload
+            this.setTheme('dark', false);
 
             if (this.themeToggleBtn) {
                 this.themeToggleBtn.addEventListener('click', () => {
                     this.toggle();
-                });
-            }
-
-            if (window.matchMedia) {
-                window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
-                    if (!localStorage.getItem('yb_theme')) {
-                        this.setTheme(e.matches ? 'light' : 'dark', false);
-                    }
                 });
             }
         }
@@ -330,9 +313,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (isUserAction) {
-                try {
-                    localStorage.setItem('yb_theme', theme);
-                } catch (e) {}
                 sound.playClick();
             }
 
@@ -507,6 +487,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const hoverTargets = document.querySelectorAll('a, button, [data-cursor], .project-editorial-card, .lab-card, .spatial-card, .footer-pill, .btn-primary, .btn-outline, .audio-widget, .theme-widget, .intro-heading, .intro-btn, .btn-resume-download, .btn-resume-preview');
 
             hoverTargets.forEach(el => {
+                if (el._hasCursorBound) return;
+                el._hasCursorBound = true;
+
                 el.addEventListener('mouseenter', () => {
                     if (this.isTouchOrMobile()) return;
                     this.isHovered = true;
@@ -672,15 +655,20 @@ document.addEventListener('DOMContentLoaded', () => {
             projectKeys.forEach((key, index) => {
                 const data = PROJECT_DATA[key];
                 const pos = layoutPositions[index % layoutPositions.length];
-
                 const geom = new THREE.PlaneGeometry(360, 220, 16, 16);
 
-                textureLoader.load(data.img, (texture) => {
-                    texture.minFilter = THREE.LinearFilter;
-                    texture.generateMipmaps = false;
+                if (typeof data.img === 'string' && data.img.startsWith('http')) {
+                    textureLoader.setCrossOrigin('anonymous');
+                } else {
+                    textureLoader.setCrossOrigin(null);
+                }
+
+                const applyMesh = (mapTexture) => {
+                    mapTexture.minFilter = THREE.LinearFilter;
+                    mapTexture.generateMipmaps = false;
 
                     const mat = new THREE.MeshStandardMaterial({
-                        map: texture,
+                        map: mapTexture,
                         roughness: 0.25,
                         metalness: 0.1,
                         side: THREE.DoubleSide
@@ -697,7 +685,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     this.scene.add(mesh);
                     this.cards.push(mesh);
-                });
+                };
+
+                textureLoader.load(
+                    data.img,
+                    (texture) => {
+                        applyMesh(texture);
+                    },
+                    undefined,
+                    () => {
+                        // Resilient procedural fallback canvas if cross-origin or network fails
+                        const canvas = document.createElement('canvas');
+                        canvas.width = 720;
+                        canvas.height = 440;
+                        const ctx = canvas.getContext('2d');
+                        ctx.fillStyle = '#0a0b12';
+                        ctx.fillRect(0, 0, 720, 440);
+                        ctx.strokeStyle = 'rgba(121, 82, 255, 0.4)';
+                        ctx.lineWidth = 4;
+                        ctx.strokeRect(12, 12, 696, 416);
+                        ctx.fillStyle = '#ffffff';
+                        ctx.font = 'bold 30px sans-serif';
+                        ctx.textAlign = 'center';
+                        ctx.fillText(data.title, 360, 210);
+                        ctx.fillStyle = '#9f82ff';
+                        ctx.font = '600 18px monospace';
+                        ctx.fillText(data.category, 360, 260);
+
+                        const fallbackTex = new THREE.CanvasTexture(canvas);
+                        applyMesh(fallbackTex);
+                    }
+                );
             });
         }
 
@@ -841,7 +859,6 @@ document.addEventListener('DOMContentLoaded', () => {
             this.timelineEl = document.getElementById('modal-timeline');
             this.deliverablesEl = document.getElementById('modal-deliverables');
             this.imgEl = document.getElementById('modal-img');
-            this.challengeEl = document.getElementById('modal-challenge');
             this.solutionEl = document.getElementById('modal-solution');
             this.tagsEl = document.getElementById('modal-tags');
 
@@ -859,11 +876,223 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
 
+            const modalCtaBtn = document.getElementById('modal-cta-btn');
+            if (modalCtaBtn) {
+                modalCtaBtn.addEventListener('click', () => {
+                    this.close();
+                    const contactSec = document.getElementById('contact');
+                    if (contactSec) {
+                        setTimeout(() => {
+                            contactSec.scrollIntoView({ behavior: 'smooth' });
+                        }, 280);
+                    }
+                });
+            }
+
             window.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape' && this.modal.classList.contains('open')) {
                     this.close();
                 }
             });
+
+            // Boundary scroll auto-minimize with progressive resistance and smooth transition
+            let overscrollUp = 0;
+            let overscrollDown = 0;
+            let resetTimer = null;
+            let isTransitioningOut = false;
+            const OVERSCROLL_THRESHOLD = 260; // Accepts ~3 deliberate scrolls before minimizing
+
+            const resetDrawerTransform = () => {
+                if (isTransitioningOut || !this.drawer) return;
+                this.drawer.style.transition = 'transform 0.45s cubic-bezier(0.16, 1, 0.3, 1)';
+                this.drawer.style.transform = 'translateY(0)';
+                if (this.modal) {
+                    this.modal.style.transition = 'opacity 0.45s ease';
+                    this.modal.style.opacity = '1';
+                }
+                setTimeout(() => {
+                    if (!isTransitioningOut && this.drawer) {
+                        this.drawer.style.transition = '';
+                        this.drawer.style.transform = '';
+                    }
+                    if (!isTransitioningOut && this.modal) {
+                        this.modal.style.transition = '';
+                        this.modal.style.opacity = '';
+                    }
+                }, 450);
+                overscrollUp = 0;
+                overscrollDown = 0;
+            };
+
+            const triggerSmoothMinimize = () => {
+                if (isTransitioningOut) return;
+                isTransitioningOut = true;
+                overscrollUp = 0;
+                overscrollDown = 0;
+
+                // Animate drawer gliding smoothly down into minimized state
+                if (this.drawer) {
+                    this.drawer.style.transition = 'transform 0.5s cubic-bezier(0.32, 0.72, 0, 1)';
+                    this.drawer.style.transform = 'translateY(100%)';
+                }
+                if (this.modal) {
+                    this.modal.style.transition = 'opacity 0.5s ease';
+                    this.modal.style.opacity = '0';
+                }
+
+                setTimeout(() => {
+                    this.close();
+                    if (this.drawer) {
+                        this.drawer.style.transition = '';
+                        this.drawer.style.transform = '';
+                    }
+                    if (this.modal) {
+                        this.modal.style.transition = '';
+                        this.modal.style.opacity = '';
+                    }
+                    isTransitioningOut = false;
+                }, 480);
+            };
+
+            if (this.drawer) {
+                this.drawer.addEventListener('wheel', (e) => {
+                    if (!this.modal.classList.contains('open') || isTransitioningOut) return;
+                    if (Date.now() - (this.openedAt || 0) < 350) return;
+
+                    const scrollTop = this.drawer.scrollTop;
+                    const scrollHeight = this.drawer.scrollHeight;
+                    const clientHeight = this.drawer.clientHeight;
+                    const isAtTop = scrollTop <= 2;
+                    const isAtBottom = (scrollTop + clientHeight) >= (scrollHeight - 6);
+
+                    // Scrolling UP when already at top (no room to scroll up)
+                    if (isAtTop && e.deltaY < 0) {
+                        overscrollUp += Math.abs(e.deltaY);
+                        overscrollDown = 0;
+
+                        clearTimeout(resetTimer);
+                        resetTimer = setTimeout(resetDrawerTransform, 320);
+
+                        // Visual tactile pull feedback
+                        const progress = Math.min(overscrollUp / OVERSCROLL_THRESHOLD, 1);
+                        const elasticY = Math.pow(progress, 0.8) * 55;
+                        this.drawer.style.transition = 'none';
+                        this.drawer.style.transform = `translateY(${elasticY}px)`;
+                        if (this.modal) {
+                            this.modal.style.transition = 'none';
+                            this.modal.style.opacity = `${1 - progress * 0.3}`;
+                        }
+
+                        if (overscrollUp >= OVERSCROLL_THRESHOLD) {
+                            clearTimeout(resetTimer);
+                            triggerSmoothMinimize();
+                        }
+                        return;
+                    }
+
+                    // Scrolling DOWN when already at bottom (no room to scroll down)
+                    if (isAtBottom && e.deltaY > 0) {
+                        overscrollDown += Math.abs(e.deltaY);
+                        overscrollUp = 0;
+
+                        clearTimeout(resetTimer);
+                        resetTimer = setTimeout(resetDrawerTransform, 320);
+
+                        // Visual tactile pull feedback
+                        const progress = Math.min(overscrollDown / OVERSCROLL_THRESHOLD, 1);
+                        const elasticY = Math.pow(progress, 0.8) * 55;
+                        this.drawer.style.transition = 'none';
+                        this.drawer.style.transform = `translateY(${elasticY}px)`;
+                        if (this.modal) {
+                            this.modal.style.transition = 'none';
+                            this.modal.style.opacity = `${1 - progress * 0.3}`;
+                        }
+
+                        if (overscrollDown >= OVERSCROLL_THRESHOLD) {
+                            clearTimeout(resetTimer);
+                            triggerSmoothMinimize();
+                        }
+                        return;
+                    }
+
+                    // Normal scrolling inside content
+                    if (!isAtTop && !isAtBottom) {
+                        if (overscrollUp > 0 || overscrollDown > 0) {
+                            resetDrawerTransform();
+                        }
+                    }
+                }, { passive: true });
+
+                // Touch / Trackpad swipe gestures with proportional resistance
+                let touchStartY = 0;
+                let touchStartX = 0;
+                let isTouchActive = false;
+
+                this.drawer.addEventListener('touchstart', (e) => {
+                    if (e.touches.length > 0) {
+                        touchStartY = e.touches[0].clientY;
+                        touchStartX = e.touches[0].clientX;
+                        isTouchActive = true;
+                    }
+                }, { passive: true });
+
+                this.drawer.addEventListener('touchmove', (e) => {
+                    if (!this.modal.classList.contains('open') || !isTouchActive || isTransitioningOut) return;
+                    if (Date.now() - (this.openedAt || 0) < 350) return;
+
+                    const currentY = e.touches[0].clientY;
+                    const deltaY = currentY - touchStartY;
+                    const deltaX = e.touches[0].clientX - touchStartX;
+
+                    if (Math.abs(deltaY) < Math.abs(deltaX) * 1.5) return;
+
+                    const scrollTop = this.drawer.scrollTop;
+                    const scrollHeight = this.drawer.scrollHeight;
+                    const clientHeight = this.drawer.clientHeight;
+                    const isAtTop = scrollTop <= 2;
+                    const isAtBottom = (scrollTop + clientHeight) >= (scrollHeight - 6);
+
+                    // Pulling down at top
+                    if (isAtTop && deltaY > 0) {
+                        const touchPull = Math.min(deltaY * 0.45, 80);
+                        this.drawer.style.transition = 'none';
+                        this.drawer.style.transform = `translateY(${touchPull}px)`;
+                    }
+                    // Pulling up at bottom
+                    else if (isAtBottom && deltaY < 0) {
+                        const touchPull = Math.min(Math.abs(deltaY) * 0.45, 80);
+                        this.drawer.style.transition = 'none';
+                        this.drawer.style.transform = `translateY(${touchPull}px)`;
+                    }
+                }, { passive: true });
+
+                this.drawer.addEventListener('touchend', (e) => {
+                    if (!isTouchActive || isTransitioningOut) return;
+                    isTouchActive = false;
+
+                    const scrollTop = this.drawer.scrollTop;
+                    const scrollHeight = this.drawer.scrollHeight;
+                    const clientHeight = this.drawer.clientHeight;
+                    const isAtTop = scrollTop <= 2;
+                    const isAtBottom = (scrollTop + clientHeight) >= (scrollHeight - 6);
+                    const touchDist = (e.changedTouches && e.changedTouches[0]) ? (e.changedTouches[0].clientY - touchStartY) : 0;
+
+                    if ((isAtTop && touchDist > 140) || (isAtBottom && touchDist < -140)) {
+                        triggerSmoothMinimize();
+                    } else {
+                        resetDrawerTransform();
+                    }
+                }, { passive: true });
+            }
+
+            // Scrolling on the modal backdrop also closes
+            if (this.modal) {
+                this.modal.addEventListener('wheel', (e) => {
+                    if (e.target === this.modal && Date.now() - (this.openedAt || 0) > 350 && !isTransitioningOut) {
+                        triggerSmoothMinimize();
+                    }
+                }, { passive: true });
+            }
 
             const cards = document.querySelectorAll('.project-editorial-card');
             cards.forEach(card => {
@@ -878,23 +1107,32 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = PROJECT_DATA[key];
             if (!data) return;
 
+            this.openedAt = Date.now();
+            if (this.drawer) {
+                this.drawer.scrollTop = 0;
+            }
+
             this.titleEl.textContent = data.title;
             this.categoryEl.textContent = data.category;
             this.clientEl.textContent = data.client;
             this.roleEl.textContent = data.role;
             this.timelineEl.textContent = data.timeline;
             this.deliverablesEl.textContent = data.deliverables;
-            this.imgEl.src = data.img;
-            this.challengeEl.textContent = data.challenge;
+            this.imgEl.src = (key === 'batball') ? 'images/batball11-dashboard.jpg' : data.img;
             this.solutionEl.textContent = data.solution;
 
             this.tagsEl.innerHTML = '';
             data.tags.forEach(t => {
                 const span = document.createElement('span');
                 span.className = 'project-tag';
+                span.setAttribute('data-cursor', 'SKILL');
                 span.textContent = t;
                 this.tagsEl.appendChild(span);
             });
+
+            if (typeof cursorController !== 'undefined' && cursorController && cursorController.bindHoverElements) {
+                cursorController.bindHoverElements();
+            }
 
             this.modal.classList.add('open');
             document.body.style.overflow = 'hidden';
@@ -902,7 +1140,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         close() {
-            this.modal.classList.remove('open');
+            if (this.drawer) {
+                this.drawer.style.transition = '';
+                this.drawer.style.transform = '';
+            }
+            if (this.modal) {
+                this.modal.style.transition = '';
+                this.modal.style.opacity = '';
+                this.modal.classList.remove('open');
+            }
             document.body.style.overflow = '';
             sound.playModalClose();
         }

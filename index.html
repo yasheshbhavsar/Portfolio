@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -9,22 +9,20 @@
         content="Portfolio of Yashesh Bhavsar — Gen AI Auditor at Outlier.ai, Content Specialist & Legal Document Evaluator based in Ahmedabad, India.">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="styles.css">
-    <!-- Immediate theme initializer to prevent Flash of Wrong Theme (FOWT) -->
+    <!-- Immediate theme initializer: Dark Mode is default on every reload -->
     <script>
         (function () {
             try {
-                var savedTheme = localStorage.getItem('yb_theme');
-                var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-                var activeTheme = savedTheme ? savedTheme : (prefersLight ? 'light' : 'dark');
-                document.documentElement.setAttribute('data-theme', activeTheme);
-            } catch (e) {}
+                localStorage.removeItem('yb_theme');
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } catch (e) { }
         })();
     </script>
 </head>
 
 <body>
     <!-- Background Ambient Audio -->
-    <audio id="bg-ambient-audio" src="zephiramusic-lofi-soul-588903.mp3" loop preload="auto"></audio>
+    <audio id="bg-ambient-audio" src="audio/zephiramusic-lofi-soul-588903.mp3" loop preload="auto"></audio>
 
     <!-- Motion Blur Cursor (Ignacio Correia Concept) -->
     <div id="motion-blur-cursor" class="motion-blur-cursor"></div>
@@ -42,7 +40,8 @@
             </div>
         </div>
         <div class="intro-content">
-            <div class="intro-badge">Interactive Sound & Spatial Experience</div>
+            <h2 class="intro-portfolio-title">PORTFOLIO</h2>
+            <div class="intro-badge">Interactive Sound &amp; Spatial Experience</div>
             <h1 class="intro-heading" id="intro-trigger" data-cursor="LISTEN">
                 <span class="line">
                     <span class="word">Click</span>
@@ -73,7 +72,7 @@
             <a href="#home" class="logo-monogram" data-cursor="HOME">
                 YB<span>.</span>
             </a>
-            <span class="header-role">Gen AI Auditor & Content Specialist</span>
+            <span class="header-role">Portfolio · Gen AI Auditor &amp; Content Specialist</span>
         </div>
 
         <div class="header-status">
@@ -83,9 +82,11 @@
 
         <div class="header-right">
             <!-- Theme Toggle Widget (Light / Dark) -->
-            <button class="theme-widget" id="theme-toggle" data-cursor="THEME" aria-label="Toggle light and dark theme" title="Toggle Light / Dark Theme">
+            <button class="theme-widget" id="theme-toggle" data-cursor="THEME" aria-label="Toggle light and dark theme"
+                title="Toggle Light / Dark Theme">
                 <div class="theme-icon-wrap">
-                    <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
                         <line x1="12" y1="1" x2="12" y2="3"></line>
                         <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -96,7 +97,8 @@
                         <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
-                    <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
                 </div>
@@ -128,10 +130,12 @@
 
             <!-- Hero Foreground Overlay -->
             <div class="hero-overlay-content">
-                <div class="hero-eyebrow-pill">Gen AI Auditor · Content Specialist · IT Professional</div>
+                <div class="hero-eyebrow-pill">
+                    <span>Gen AI Auditor · Content Specialist · IT Professional</span>
+                </div>
                 <h1 class="hero-headline">
-                    Evaluating <span class="serif-accent">AI Intelligence</span><br>
-                    & Editorial Clarity
+                    Evaluating <span class="serif-accent">AI&nbsp;Intelligence</span><br>
+                    &amp; Editorial Clarity
                 </h1>
                 <p class="hero-description">
                     Combining a rigorous background in Information Technology, complex legal document review, and
@@ -178,7 +182,7 @@
                 <!-- Project 1 -->
                 <article class="project-editorial-card" data-project="outlier" data-cursor="VIEW">
                     <div class="project-media-frame">
-                        <img src="https://images.unsplash.com/photo-1677442136019-21780efad99a?w=1400&h=900&fit=crop"
+                        <img src="https://images.unsplash.com/photo-1694903089438-bf28d4697d9a?w=1400&h=900&fit=crop"
                             alt="Gen AI Model Evaluation">
                         <div class="project-overlay-gradient"></div>
                     </div>
@@ -198,7 +202,7 @@
                 <!-- Project 2 -->
                 <article class="project-editorial-card" data-project="skysail" data-cursor="VIEW">
                     <div class="project-media-frame">
-                        <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?w=1400&h=900&fit=crop"
+                        <img src="https://images.unsplash.com/photo-1581656702382-9ae90e68e7b7?w=1400&h=900&fit=crop"
                             alt="Legal Drafting and Immigration Review">
                         <div class="project-overlay-gradient"></div>
                     </div>
@@ -218,8 +222,8 @@
                 <!-- Project 3 -->
                 <article class="project-editorial-card" data-project="batball" data-cursor="VIEW">
                     <div class="project-media-frame">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&h=900&fit=crop"
-                            alt="Backend Data QA and Anomaly Detection">
+                        <img src="images/batball11-dashboard.jpg"
+                            alt="Backend Data QA and Anomaly Detection at Batball11">
                         <div class="project-overlay-gradient"></div>
                     </div>
                     <div class="project-meta-row">
@@ -238,7 +242,7 @@
                 <!-- Project 4 -->
                 <article class="project-editorial-card" data-project="newsenquire" data-cursor="VIEW">
                     <div class="project-media-frame">
-                        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1400&h=900&fit=crop"
+                        <img src="https://images.unsplash.com/photo-1519337265831-281ec6cc8514?w=1400&h=900&fit=crop"
                             alt="Investigative Content and Fact-Checking">
                         <div class="project-overlay-gradient"></div>
                     </div>
@@ -271,8 +275,7 @@
 
             <div class="about-grid-layout">
                 <div class="about-portrait-frame" data-cursor="PORTRAIT">
-                    <img src="ChatGPT Image Sep 1, 2026, 11_15_37 PM (1).jpeg"
-                        alt="Yashesh Bhavsar">
+                    <img src="images/ChatGPT Image Sep 1, 2026, 11_15_37 PM (1).jpeg" alt="Yashesh Bhavsar">
                 </div>
                 <div>
                     <h3 class="about-lead-quote">
@@ -589,6 +592,47 @@
             </div>
         </section>
 
+        <!-- Editorial Sign-off & Transitional Bridge -->
+        <div class="signoff-bridge-container" id="signoff-bridge">
+            <div class="bridge-ambient-glow"></div>
+
+            <div class="bridge-rule-row">
+                <span class="bridge-rule-line"></span>
+            </div>
+
+            <div class="signoff-content-card">
+                <div class="signoff-badge-pill">
+                    <span class="signoff-sparkle">✦</span>
+                    <span>Epilogue · Personal Sign-Off</span>
+                </div>
+
+                <h3 class="signoff-headline">
+                    “This is it for me — <span class="signoff-author">Yashesh Bhavsar</span>.”
+                </h3>
+
+                <p class="signoff-subcaption">
+                    Ready to bring precision, integrity, and depth to your next AI initiative.
+                </p>
+
+                <div class="signoff-lead-in">
+                    <a href="#contact" class="signoff-scroll-hint" data-cursor="CONNECT">
+                        <span class="lead-in-text">Next: Initiate Collaboration</span>
+                        <span class="lead-in-arrow-wrap">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <polyline points="19 12 12 19 5 12"></polyline>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bridge-rule-row bridge-rule-bottom">
+                <span class="bridge-rule-line"></span>
+            </div>
+        </div>
+
         <!-- Contact Section -->
         <section id="contact" class="section-wrapper">
             <div class="contact-section-inner">
@@ -642,6 +686,11 @@
                 </div>
                 <a href="#contact" class="btn-luxury primary" id="modal-cta-btn" data-cursor="CONNECT">
                     <span>Contact Yashesh</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
                 </a>
             </div>
 
@@ -664,19 +713,18 @@
                 </div>
             </div>
 
-            <div class="modal-body-section">
-                <h3 class="modal-section-h3">Operational Mandate & Challenge</h3>
-                <p class="modal-body-p" id="modal-challenge">
-                    Detailed analysis of factual errors, bias detection, and complex information auditing under strict
-                    quality constraints.
-                </p>
-            </div>
 
-            <div class="modal-body-section">
-                <h3 class="modal-section-h3">Action, Precision & Impact</h3>
-                <p class="modal-body-p" id="modal-solution">
+            <div class="modal-body-section modal-impact-card">
+                <h3 class="modal-section-h3 impact-h3">
+                    Action, Precision &amp; Impact
+                </h3>
+                <p class="modal-body-p impact-p" id="modal-solution">
                     Applied multi-layered verification rubrics, human-in-the-loop feedback, and syntactic precision.
                 </p>
+                <div class="modal-tags-header">
+                    <span class="tags-header-label">Verified Competencies &amp; Applied Tooling</span>
+                    <span class="tags-header-line"></span>
+                </div>
                 <div class="modal-stack-tags" id="modal-tags">
                     <!-- Dynamic Tags -->
                 </div>
@@ -714,6 +762,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="images/batball11-data.js"></script>
     <script src="script.js"></script>
 </body>
 
