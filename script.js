@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             role: 'Administrative & Data Specialist',
             timeline: 'FEB 2021 — DEC 2021',
             deliverables: 'Real-time Anomaly Detection, Live Match Telemetry, Data Operations',
-            img: (typeof window !== 'undefined' && window.BATBALL11_LOCAL_IMAGE) ? window.BATBALL11_LOCAL_IMAGE : 'images/batball11-dashboard.jpg',
+            img: (typeof window !== 'undefined' && window.BATBALL11_LOCAL_IMAGE) ? window.BATBALL11_LOCAL_IMAGE : 'batball11-dashboard.jpg',
             solution: 'Maintained absolute data accuracy, established real-time anomaly detection routines, and rapidly diagnosed edge-case anomalies to ensure seamless, uninterrupted platform operations.',
             tags: ['Data Verification', 'Anomaly Detection', 'Backend Operations', 'Quality Assurance', 'Real-time Telemetry']
         },
